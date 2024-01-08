@@ -149,11 +149,12 @@ p > a:hover {
     }
 
     section:has(>h2){
-        max-width: 70vw;
         column-count: 2;
+        max-width: 70vw;
         column-gap: 2rem;
-        margin: auto;
     }
+
+
 
     input:not([type="checkbox"]) {
         width: 30vw;
