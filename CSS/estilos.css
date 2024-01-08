@@ -123,7 +123,7 @@ p > a:hover {
   border-bottom: 1px dotted rgb(0, 59, 74);
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 991px) {
   section:not(:first-child) {
     margin: 1rem 3vw 1rem 2vw;
     width: 96vw;
@@ -140,4 +140,31 @@ p > a:hover {
   button {
     width: 45vw;
   }
+}
+
+@media screen and (min-width: 992px) {
+
+    section:not(:first-child) {
+        margin: auto;
+    }
+
+    section:has(>h2){
+        max-width: 70vw;
+        column-count: 2;
+        column-gap: 2rem;
+        margin: auto;
+    }
+
+    input:not([type="checkbox"]) {
+        width: 30vw;
+      }
+    
+      form > p {
+        width: 30vw;
+      }
+    
+      button {
+        width: 30vw;
+      }
+
 }
