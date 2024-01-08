@@ -6,12 +6,12 @@ body {
   margin: 0;
 }
 
-header {
+body > header {
   display: flex;
   align-items: center;
   flex-direction: row;
   justify-content: space-between;
-  margin: 1rem 5vw 0 5vw;
+  margin: 1rem 5vw 1rem 5vw;
 }
 
 nav > ul {
@@ -31,13 +31,13 @@ nav > ul > li > a {
   font-weight: bold;
   text-transform: uppercase;
 }
+
 nav > ul > li > a:hover {
   color: rgb(191, 12, 240);
 }
 
-section > h1 {
+main > article > header {
   background-image: url(../img/hero-image-home.jpg);
-  max-width: 100%;
   height: 50vh;
   background-position: center;
   background-repeat: no-repeat;
@@ -45,7 +45,11 @@ section > h1 {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: center;
+}
+
+main > article > header > h1 {
+  max-width: 100%;
   font-size: 2.7rem;
   font-weight: 900;
   padding: 0 2rem 0 1.5rem;
@@ -58,13 +62,11 @@ h3 {
 }
 
 h2 {
-  margin: 2rem 0;
-  font-size: 1.5rem;
+  font-size: 2.5rem;
 }
 
-section:not(:first-child) {
-  margin: 1rem 4vw 1rem 2vw;
-  width: 95vw;
+section {
+  padding: 0 1rem 2rem 1rem;
 }
 
 p {
@@ -83,7 +85,7 @@ form {
 
 label,
 input {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.2rem;
   margin-left: 0;
 }
 
@@ -94,22 +96,37 @@ input {
 }
 
 label[for="terms"] {
-  margin: 1.5rem 0 2rem 0;
+  margin: 1rem 0 1.5rem 0;
+  font-size: 0.75rem;
 }
 
-form > p {
-  font-size: 0.9rem;
+form > p:first-of-type {
+  margin-bottom: 1rem;
+  margin-top: 0;
+}
+
+form > p:last-of-type {
+  font-size: 0.75rem;
   line-height: 1.2;
 }
 
 button {
+  font-size: 1rem;
+  margin-right: auto;
+}
+
+p + a {
+  border: 1px solid rgb(0, 59, 74);
+  text-decoration: none;
+}
+
+button,
+p + a {
   background-color: rgb(0, 59, 74);
-  color: white;
   text-transform: uppercase;
-  font-size: larger;
-  width: 80vw;
   border-radius: 0.3rem;
   padding: 0.5rem;
+  color: white;
 }
 
 p > a:link {
@@ -123,87 +140,82 @@ p > a:hover {
   border-bottom: 1px dotted rgb(0, 59, 74);
 }
 
-.index section:last-of-type {
-    background-color: rgb(229, 225, 254);
-    width: 100vw;
-    margin: 2rem 0 2rem 0;
-    padding-bottom: 4rem;
+article > article {
+  background-color: rgb(229, 225, 254);
+  margin: 0;
+  padding: 1rem;
 }
 
-figure {
-  margin: 2rem 1rem 0.8rem 1rem;
-  padding: 2rem 0 0 0;
+article > article:last-of-type {
+  padding-bottom: 6.5rem;
+}
+
+article > figure {
+  margin: 1.5rem 0 0 0;
 }
 
 figcaption {
-    font-size: 0.8rem;
-    text-align: right;
+  font-size: 0.8rem;
+  text-align: right;
 }
 
 h3 {
-    font-size: 1.3rem;
-    margin-left: 1rem;
-    margin-top: 0;
+  font-size: 1.3rem;
+  margin-top: 0;
 }
 
 h3 + p {
-    margin-left: 1rem;
-    margin-bottom: 2rem;
+  margin-bottom: 2rem;
 }
 
-p + a {
-    border: 1px solid rgb(0, 59, 74);
-    background-color: rgb(0, 59, 74);
-    padding: 0.5rem 1rem;
-    border-radius: 0.3rem;
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-    margin-left: 1rem;
-}
+@media screen and (min-width: 768px) {
+    article > article {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 2rem;
+    }
 
-@media screen and (min-width: 768px) and (max-width: 991px) {
-  .index section:not(:first-child) {
-    margin: 1rem 3vw 1rem 2vw;
-    width: 96vw;
-  }
+    article > article > figure {
+        transform: rotate(-5deg);
+    }
 
-  input:not([type="checkbox"]) {
-    width: 75vw;
-  }
+    article > article:nth-child(even) {
+        flex-direction: row-reverse;
+    }
 
-  form > p {
-    width: 75vw;
-  }
-
-  button {
-    width: 45vw;
-  }
+    article > article:nth-child(even) > figure {
+        transform: rotate(5deg);
+    }
 }
 
 @media screen and (min-width: 992px) {
+  main > article > header > h1 {
+    max-width: 65vw;
+  }
 
-    .index section:not(:first-child) {
-        margin: auto;
-    }
+  main > article > header > h1 {
+    text-wrap: balance;
+  }
 
-    .index section:has(>h2){
-        column-count: 2;
-        max-width: 70vw;
-        column-gap: 2rem;
-    }
+  article > article,
+  article > section {
+    padding: 1rem 17.5vw;
+  }
 
+  article > section > div {
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+  }
 
+  article > section > h2 {
+    margin-top: 0.75rem;
+    margin-bottom: 0.75rem;
+  }
 
-    input:not([type="checkbox"]) {
-        width: 30vw;
-      }
-    
-      form > p {
-        width: 30vw;
-      }
-    
-      button {
-        width: 30vw;
-      }
-
+  article > section > div > div,
+  article > section > div > form {
+    flex: 1;
+  }
 }
