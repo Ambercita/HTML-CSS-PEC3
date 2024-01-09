@@ -1,51 +1,81 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Vital360 | Mejores consejos y artículos sobre salud</title>
-        <meta name="description" content="Encuentra información útil y actualizada sobre nutrición, bienestar mental y mucho más.">
-        <link rel="stylesheet" href="CSS/estilos.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Noto+Serif:wght@600&display=swap"
-            rel="stylesheet"> 
-    </head>
-    <body>
-        <header>
-            <a href="index.html"><img src="img/logoVital360.svg" width="auto" height="50" alt="Vital360"></a>
-            <nav>
-                <ul>
-                    <li>
-                        <a href="blog.html" class="active">Blog</a>
-                    </li>
-                    <li>
-                        <a href="videos.html">Vídeos</a>
-                    </li>
-                </ul>
-            </nav>
-        </header>
-        <main>
-            <section>
-                <h2>El Blog de salud de Vital360</h2>
-                <article>
-                    <figure>
-                        <img src="img/estrategias-vida-activa.jpg" alt="Estrategias para una vida activa">
-                        <figcaption>
-                            <p>Por Daniel López - 30 de diciembre de 2023</p>
-                        </figcaption>
-                    </figure>
-                    <header>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vital360 | Mejores consejos y artículos sobre salud</title>
+    <meta name="description"
+        content="Encuentra información útil y actualizada sobre nutrición, bienestar mental y mucho más.">
+    <link rel="stylesheet" href="CSS/estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Noto+Serif:wght@600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <a href="index.html"><img src="img/logoVital360.svg" width="96" height="50" alt="Vital360"></a>
+        <nav>
+            <ul>
+                <li>
+                    <a href="blog.html" class="active">Blog</a>
+                </li>
+                <li>
+                    <a href="videos.html">Vídeos</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main class="blog">
+        <section>
+            <h2>El Blog de salud de Vital360</h2>
+            <article>
+                <figure>
+                    <a href="" lang="en">Fitness</a>
+                    <img src="img/estrategias-vida-activa.jpg" alt="Estrategias para una vida activa">
+                    <figcaption>
+                        &copy; Erik Dungan, en Unsplash
+                    </figcaption>
+                </figure>
+                <header>
+                    <p>Por Daniel López - <time datetime="2023-12-30">30 de diciembre de 2023</time></p>
                     <h3><a href="entrada.html">Estrategias para una vida activa</a></h3>
                     <p>Mantenerse activo es clave para una vida saludable. Encuentra estrategias
                         prácticas y sencillas para integrar más actividad física en tu rutina diaria,
                         independientemente de tu nivel de fitness o estilo de vida.</p>
-                    </header>
-                    <footer>
-                        <a>Leer más ></a>
-                    </footer>
-                </article>
-            </section>
-        </main>
-    </body>
+                </header>
+                <footer>
+                    <a href="entrada.html">Leer más ></a>
+                </footer>
+            </article>
+        </section>
+        <ul class="paginator">
+            <li><a href="" class="active">1</a></li>
+            <li><a href="">2</a></li>
+            <li><a href="">3</a></li>
+            <li><a href="">...</a></li>
+        </ul>
+    </main>
+    <footer>
+        <div>
+            <a href="index.html"><img src="img/logoVital360.svg" width="96" height="50" alt="Vital360"></a>
+            <p>2023-2024 | Jia Wang</p>
+        </div>
+        <div>
+            <ul>
+                <li><a href=""><img src="img/twitter.svg" width="30" height="30" alt="twitter"></a></li>
+                <li><a href=""><img src="img/instagram.svg" width="30" height="30" alt="instagram"></a></li>
+                <li><a href=""><img src="img/youtube.svg" width="37" height="30" alt="youtube"></a></li>
+            </ul>
+            <ul>
+                <li><a href="">Política de privacidad</a></li>
+                <li><a href="">Política de <i lang="en">cookies</i></a></li>
+                <li><a href="">Aviso legal</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+
 </html>
