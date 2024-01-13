@@ -415,6 +415,11 @@ aside h3 > a:hover {
   article > article:nth-child(even) > figure {
     transform: rotate(5deg);
   }
+
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1.5rem;
 }
 
 @media screen and (min-width: 992px) {
