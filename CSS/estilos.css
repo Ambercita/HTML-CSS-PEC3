@@ -371,7 +371,7 @@ aside h3 > a:hover {
 
 /* ESTILOS PARA ENTRADA */
 .breadcrumbs {
-  padding: 4rem 0.5rem 1.5rem 0.5rem;
+  padding: 4rem 1rem 1.5rem 1rem;
 }
 
 .breadcrumbs ul {
@@ -402,14 +402,14 @@ aside h3 > a:hover {
 }
 
 .breadcrumbs + article {
-  margin: 0 .8rem;
-  padding: .8rem;
+  margin: 0 1rem;
+  padding: 1rem;
   background-color: rgb(255, 255, 255);
 }
 
 .breadcrumbs + article > figure {
   background-color: rgb(229, 225, 254);
-  padding-bottom: 1rem;
+  padding-bottom: .8rem;
   margin: 0;
 }
 
@@ -437,8 +437,36 @@ aside h3 > a:hover {
 }
 
 .breadcrumbs + article > figure + p {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+
+.breadcrumbs + article > section > p {
+  line-height: 1.5;
+}
+
+.breadcrumbs + article > section {
+  padding: 0;
+  margin: 0;
+}
+
+.breadcrumbs + article > section > h3:not(aside) {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.breadcrumbs + article > section > ul,
+.breadcrumbs + article > section > ol {
+  padding-left: 2rem;
+  margin-top: 0;
+}
+
+.breadcrumbs + article > section > ul > li,
+.breadcrumbs + article > section > ol >li {
+  margin-bottom: 1rem;
+  line-height: 1.5;
 }
 
 @media screen and (min-width: 768px) {
