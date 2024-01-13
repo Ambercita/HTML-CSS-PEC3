@@ -375,8 +375,10 @@ aside h3 > a:hover {
 }
 
 /* ESTILOS PARA ENTRADA */
+
 .breadcrumbs {
   padding: 4rem 1rem 1.5rem 1rem;
+  grid-area: breadcrumbs;
 }
 
 .breadcrumbs ul {
@@ -410,6 +412,7 @@ aside h3 > a:hover {
   margin: 0 1rem;
   padding: 1rem;
   background-color: rgb(255, 255, 255);
+  grid-area: article;
 }
 
 .breadcrumbs + article > figure {
@@ -490,6 +493,7 @@ blockquote cite {
 aside {
   margin: 3rem 1rem 0 1rem; 
   padding-bottom: 7.5rem;
+  grid-area: aside;
 }
 
 aside > section {
@@ -660,4 +664,22 @@ aside > section > a:hover{
   .blog > section {
     margin: 0 1.5rem;
   }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  aside {
+    margin: 0 1rem;
+  }
+  main:has(.breadcrumbs) {
+    display: grid;
+    grid-template-areas: 
+    "breadcrumbs breadcrumbs"
+    "article aside";
+    grid-template-columns: 3fr 1.5fr;
+    padding: 0 20vw 7rem 20vw;
+  }
+
 }
