@@ -54,8 +54,7 @@
             <article>
                 <figure>
                     <a href="" lang="en">Bienestar mental</a>
-                    <img src="img/desintoxicacion-digital.jpg" width="396" height="264"
-                        alt="un hombre mirando el celular">
+                    <img src="img/desintoxicacion-digital.jpg" width="396" height="264" alt="Hombre mirando el celular">
                     <figcaption>
                         &copy; Thom Holmes, en Unsplash
                     </figcaption>
@@ -75,7 +74,7 @@
             <article>
                 <figure>
                     <a href="">Bienestar general</a>
-                    <img src="img/conexion-mente-cuerpo.jpg" width="396" height="264" alt="un hombre mirando el mar">
+                    <img src="img/conexion-mente-cuerpo.jpg" width="396" height="264" alt="Hombre mirando el mar">
                     <figcaption>
                         &copy; Stefan Spassov, en Unsplash
                     </figcaption>
@@ -173,12 +172,25 @@
                 </footer>
             </article>
         </section>
-        <ul class="paginator">
-            <li><a href="" class="active">1</a></li>
-            <li><a href="">2</a></li>
-            <li><a href="">3</a></li>
-            <li><a href="">...</a></li>
-        </ul>
+        <nav aria-label="pagination">
+            <ul class="paginator">
+                <li>
+                    <a href="" aria-current="page" class="active"><span class="visuallyhidden">Página </span>1</a>
+                </li>
+                <li>
+                    <a href=""><span class="visuallyhidden">Página </span>2</a>
+                </li>
+                <li>
+                    <a href=""><span class="visuallyhidden">Página </span>3</a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="visuallyhidden">Siguiente conjunto de páginas</span>
+                        <span aria-hidden="true">...</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
     </main>
     <footer>
         <div>

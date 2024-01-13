@@ -1,4 +1,14 @@
 /*ESTILO GLOBAL*/
+.visuallyhidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
 
 body {
   color: rgb(0, 59, 74);
@@ -18,26 +28,26 @@ main {
   background-color: rgb(247, 247, 247);
 }
 
-nav > ul {
+header > nav > ul {
   list-style: none;
   display: flex;
 }
 
-nav > ul > li:not(:last-child) {
+header > nav > ul > li:not(:last-child) {
   border-right: 1.5px solid rgb(0, 59, 74);
   margin-right: 0.8rem;
   padding-right: 0.8rem;
 }
 
-nav > ul > li > a {
+header > nav > ul > li > a {
   text-decoration: none;
   color: rgb(0, 59, 74);
   font-weight: bold;
   text-transform: uppercase;
 }
 
-nav > ul > li > a:hover,
-nav > ul > li > a.active {
+header > nav > ul > li > a:hover,
+header > nav > ul > li > a.active {
   color: rgb(191, 12, 240);
 }
 
@@ -247,12 +257,14 @@ h3 + p {
   padding: 0.5rem;
 }
 
-.blog article > figure {
+.blog article > figure,
+aside article > figure {
   position: relative;
   margin-top: 0;
 }
 
-.blog article > figure > a {
+.blog article > figure > a,
+aside article > figure > a {
   position: absolute;
   margin: 0.3rem;
   top: 0;
@@ -270,7 +282,8 @@ h3 + p {
   opacity: 0.7;
 }
 
-.blog figure > a {
+.blog figure > a,
+aside figure > a  {
   text-decoration: none;
   color: rgb(255, 255, 255);
   font-size: 0.7rem;
@@ -278,17 +291,20 @@ h3 + p {
   padding: 0.4rem;
 }
 
-.blog figure > a:hover {
+.blog figure > a:hover,
+aside figure > a:hover {
   background-color: rgb(191, 12, 240);
 }
 
-header > h3 > a {
+header > h3 > a,
+aside h3 > a {
   color: rgb(0, 59, 74);
   text-decoration: none;
   font-size: 1.7rem;
 }
 
-header > h3 > a:hover {
+header > h3 > a:hover,
+aside h3 > a:hover {
   color: rgb(191, 12, 240);
 }
 
@@ -347,6 +363,37 @@ header > h3 > a:hover {
   background-color: rgb(191, 12, 240);
   border-color: rgb(191, 12, 240);
   color: rgb(255, 255, 255);
+}
+
+.breadcrumbs {
+  padding: 0 .5rem;
+}
+
+.breadcrumbs ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.breadcrumbs li:not(:last-child)::after {
+  display: inline-block;
+  margin: 0 .25rem;
+  content: "\00a0>";
+}
+
+.breadcrumbs li a {
+  text-decoration: none;
+  color: rgb(0, 59, 74);
+}
+
+.breadcrumbs li a:hover {
+  color: rgb(191, 12, 240);
+}
+
+.breadcrumbs li:last-child {
+  font-weight: bold;
 }
 
 @media screen and (min-width: 768px) {
