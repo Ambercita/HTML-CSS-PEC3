@@ -239,29 +239,34 @@ h3 + p {
   margin-bottom: 2rem;
 }
 
-/* ESTILO BLOG */
+/* ESTILO BLOG Y VIDEO */
 
 .blog > section {
   padding-bottom: 0;
 }
 
-.blog h2 {
+.blog h2,
+.video h2 {
   padding-top: 2rem;
 }
 
-.blog article {
+.blog article,
+.video article {
   border: 1px solid rgb(229, 225, 254);
   background-color: rgb(255, 255, 255);
   padding-bottom: 0.7rem;
 }
 
 .blog article > header,
-.blog article > footer {
+.blog article > footer,
+.video h3,
+.video p {
   padding: 0.5rem;
 }
 
 .blog article > figure,
-aside article > figure {
+aside article > figure,
+.video article > figure {
   position: relative;
   margin-top: 0;
 }
@@ -322,11 +327,13 @@ aside h3 > a:hover {
   color: rgb(158, 157, 171);
 }
 
-.blog article > header > h3 {
+.blog article > header > h3,
+.video article > h3 {
   margin-bottom: 0.5rem;
 }
 
-.blog article > header > p {
+.blog article > header > p,
+.video article > p {
   margin-top: 0.5rem;
   margin-bottom: 1rem;
 }
@@ -337,7 +344,8 @@ aside h3 > a:hover {
   border-bottom: 1px dotted rgb(191, 12, 240);
 }
 
-.blog article {
+.blog article,
+.video article {
   margin-bottom: 3rem;
 }
 
@@ -417,7 +425,7 @@ aside h3 > a:hover {
 
 .breadcrumbs + article > figure {
   background-color: rgb(229, 225, 254);
-  padding-bottom: .8rem;
+  padding-bottom: 0.8rem;
   margin: 0;
 }
 
@@ -491,7 +499,7 @@ blockquote cite {
 }
 
 aside {
-  margin: 3rem 1rem 0 1rem; 
+  margin: 3rem 1rem 0 1rem;
   padding-bottom: 7.5rem;
   grid-area: aside;
 }
@@ -511,11 +519,11 @@ aside > section > h2 {
 aside > section > div > article {
   background-color: rgb(255, 255, 255);
   margin-bottom: 2rem;
-  padding-bottom: .75rem;
+  padding-bottom: 0.75rem;
 }
 
 aside > section > div > article > figure > h3 {
-  margin: .25rem .5rem .25rem .5rem;
+  margin: 0.25rem 0.5rem 0.25rem 0.5rem;
 }
 
 aside > section > div > article > figure > h3 > a {
@@ -524,9 +532,9 @@ aside > section > div > article > figure > h3 > a {
 }
 
 aside figcaption {
-  font-size: .8rem;
+  font-size: 0.8rem;
   text-align: left;
-  margin: 0 .5rem;
+  margin: 0 0.5rem;
   line-height: 1.5;
   color: rgb(158, 157, 171);
 }
@@ -534,17 +542,28 @@ aside figcaption {
 aside > section:last-of-type > a {
   text-decoration: none;
   color: rgb(0, 59, 74);
-  font-size: .8rem;
+  font-size: 0.8rem;
   background-color: rgb(255, 255, 255);
   border: 1px solid rgb(0, 59, 74);
   display: inline-block;
-  padding: .25rem;
-  margin: 0 .25rem .25rem 0;
+  padding: 0.25rem;
+  margin: 0 0.25rem 0.25rem 0;
 }
 
-aside > section > a:hover{
+aside > section > a:hover {
   background-color: rgb(191, 12, 240);
   color: rgb(255, 255, 255);
+}
+
+/* ESTILOS PARA VIDEO */
+
+iframe {
+  max-width: 100%;
+}
+
+.video article > p {
+  margin-top: 0;
+  padding-top: 0;
 }
 
 @media screen and (min-width: 768px) {
@@ -665,7 +684,7 @@ aside > section > a:hover{
   .blog > section {
     margin: 0 1.5rem;
   }
-  
+
   .container {
     display: flex;
     flex-direction: column;
@@ -679,21 +698,27 @@ aside > section > a:hover{
   aside > section > div > article {
     margin-bottom: 1rem;
   }
-  
+
   main:has(.breadcrumbs) {
     display: grid;
-    grid-template-areas: 
-    "breadcrumbs breadcrumbs"
-    "article aside";
+    grid-template-areas:
+      "breadcrumbs breadcrumbs"
+      "article aside";
     grid-template-columns: 3fr 1.5fr;
     padding: 0 12.5vw 7rem 12.5vw;
   }
 
   aside .container {
-    margin-bottom: 1rem
+    margin-bottom: 1rem;
   }
 
   aside > section:last-of-type > a {
-    margin: .5rem .5rem 0 0;
+    margin: 0.5rem 0.5rem 0 0;
+  }
+
+  .video > section > .wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1.5rem;
   }
 }
