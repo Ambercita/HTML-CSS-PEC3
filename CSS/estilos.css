@@ -677,7 +677,7 @@ iframe {
     grid-template-columns: repeat(4, 1fr);
   }
 
-  .wrapper > article:first-of-type {
+  .blog > section > .wrapper > article:first-of-type {
     grid-column: 1 / span 2;
   }
 
