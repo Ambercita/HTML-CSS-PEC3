@@ -109,12 +109,11 @@ body > footer > div:last-of-type a > img:hover {
 .visuallyhidden {
   position: absolute;
   overflow: hidden;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  width: 1px;
-  margin: -1px;
+  opacity: 0;
+  height: 0;
+  width: 0;
+  margin: 0;
   padding: 0;
-  border: 0;
 }
 
 /* ESTILO INDEX */
@@ -370,13 +369,8 @@ aside h3 > a:hover {
   padding: 0.55rem 0.5rem;
 }
 
+.paginator > li > a:hover,
 .paginator > li > a.active {
-  border-color: rgb(191, 12, 240);
-  background-color: rgb(191, 12, 240);
-  color: rgb(255, 255, 255);
-}
-
-.paginator > li > a:hover {
   background-color: rgb(191, 12, 240);
   border-color: rgb(191, 12, 240);
   color: rgb(255, 255, 255);
@@ -743,14 +737,14 @@ iframe {
   blockquote > p > cite {
     font-size: initial;
     line-height: initial;
-}
+  }
 
-.blog section {
+  .blog section {
     padding: 0 1.5rem 2rem 1.5rem;
-}
+  }
 
-.video {
-  padding-left: 2.2rem;
-  padding-right: 2.2rem;
-}
+  .video {
+    padding-left: 2.2rem;
+    padding-right: 2.2rem;
+  }
 }
